@@ -1,0 +1,9 @@
+{
+    "name": "msgraph-quickstart",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "python3 -m http.server 8080"
+    },
+    "keywords": [],
+    "author": "Example from Learn Microsoft"
+}
