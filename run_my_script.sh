@@ -1,5 +1,5 @@
 #!/bin/sh
 echo 'Compiling ts'
-tsc --outDir ./out ./src/ch2_function.ts
+tsc --outDir ./out ./src/num02.ts
 echo 'Running node'
-node ./out/ch2_function.js
+node ./out/num02.js
