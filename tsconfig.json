@@ -2,10 +2,13 @@
     "compilerOptions": {
         "target": "ES2023",
         "module": "CommonJS",
+    
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "outDir": "out",
+
+        "outDir": "./out",
+        "rootDir": "./src",
     }
 }

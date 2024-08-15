@@ -16,6 +16,7 @@ console.log(city?.cityName);
 console.log(city?.cityCountry);
 console.log(city.cityFood?.[1]);
 console.log(city.cityFood?.[10]===undefined? "No value": "Some food name");
+//@ts-ignore
 console.log(city?.cityPopulation===undefined? "No population": "xxx number");
 
 // JSON
@@ -50,3 +51,7 @@ const testMatch1: string[] = vegeArray.filter(
     (x) => x.match(regex)
 )
 console.log(testMatch1);
+
+// instanceof
+console.log(`Instance of vegeArray is Array: 
+    ${vegeArray instanceof Array}`);

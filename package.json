@@ -1,0 +1,24 @@
+{
+  "name": "delightful_moth",
+  "version": "1.0.0",
+  "description": "Revise my JavaScript and learn some Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test1": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./out/num05.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liewchooichin/delightful_moth.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript"
+  ],
+  "author": "Liew Chooi Chin",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/liewchooichin/delightful_moth/issues"
+  },
+  "homepage": "https://github.com/liewchooichin/delightful_moth#readme"
+}

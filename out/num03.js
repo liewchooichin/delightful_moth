@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Optional property access
  * When you aren’t sure whether a given value produces an object, but
@@ -5,41 +6,44 @@
  * of the dot notation:
  *     object?.property.
  */
-var _a, _b, _c;
-var city = {
+const city = {
     cityName: "Lahore",
     cityCountry: "Pakistan",
     cityFood: ["FoodA", "FoodB", "FoodC"],
 };
-console.log((_a = city.cityName) === null || _a === void 0 ? void 0 : _a.length);
-console.log(city === null || city === void 0 ? void 0 : city.cityName);
-console.log(city === null || city === void 0 ? void 0 : city.cityCountry);
-console.log((_b = city.cityFood) === null || _b === void 0 ? void 0 : _b[1]);
-console.log(((_c = city.cityFood) === null || _c === void 0 ? void 0 : _c[10]) === undefined ? "No value" : "Some food name");
-console.log((city === null || city === void 0 ? void 0 : city.cityPopulation) === undefined ? "No population" : "xxx number");
+console.log(city.cityName?.length);
+console.log(city?.cityName);
+console.log(city?.cityCountry);
+console.log(city.cityFood?.[1]);
+console.log(city.cityFood?.[10] === undefined ? "No value" : "Some food name");
+//@ts-ignore
+console.log(city?.cityPopulation === undefined ? "No population" : "xxx number");
 // JSON
 // Encode an object to JSON
-var cityString = JSON.stringify(city);
+const cityString = JSON.stringify(city);
 console.log(cityString);
 console.log(typeof (cityString)); // type is string
 // Decode the JSON to 
-var cityObject = JSON.parse(cityString);
+const cityObject = JSON.parse(cityString);
 console.log(cityObject);
 console.log(typeof (cityObject)); // type is object
 // Turn it into an Object class
-var cityObjectType = new Object(cityObject);
-var test = cityObjectType.hasOwnProperty("cityName");
-console.log("Has name: ".concat(test));
+const cityObjectType = new Object(cityObject);
+let test = cityObjectType.hasOwnProperty("cityName");
+console.log(`Has name: ${test}`);
 // Array, forEach
-var vegeArray = ["Brocolli", "Cauliflower", "Spinach", "XiaoBaiCai", "Brinjal", "Banana"];
-var magicNumArry = [-5, -4, -20, -1, -55, -74];
-vegeArray.forEach(function (value) {
-    console.log("".concat(value, " is delicious."));
+const vegeArray = ["Brocolli", "Cauliflower", "Spinach", "XiaoBaiCai", "Brinjal", "Banana"];
+const magicNumArry = [-5, -4, -20, -1, -55, -74];
+vegeArray.forEach((value) => {
+    console.log(`${value} is delicious.`);
 });
-var newVege = vegeArray.map(function (x) { return x + " is yummy."; });
+const newVege = vegeArray.map((x) => x + " is yummy.");
 console.log(vegeArray);
 console.log(newVege);
-console.log("Type of newVege: ".concat(typeof (newVege)));
-var regex = /[Bb]/g;
-var testMatch1 = vegeArray.filter(function (x) { return x.match(regex); });
+console.log(`Type of newVege: ${typeof (newVege)}`);
+const regex = /[Bb]/g;
+const testMatch1 = vegeArray.filter((x) => x.match(regex));
 console.log(testMatch1);
+// instanceof
+console.log(`Instance of vegeArray is Array: 
+    ${vegeArray instanceof Array}`);
