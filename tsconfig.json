@@ -2,6 +2,8 @@
     "compilerOptions": {
         "target": "ES2023",
         "module": "CommonJS",
+
+        "lib": ["ES2023", "Decorators", "DOM", "WebWorker", "ScriptHost"],
     
         "strict": true,
         "esModuleInterop": true,
@@ -9,6 +11,6 @@
         "forceConsistentCasingInFileNames": true,
 
         "outDir": "./out",
-        "rootDir": "./src",
+        "rootDir": "./js_only",
     }
 }

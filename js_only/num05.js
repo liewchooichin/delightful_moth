@@ -30,9 +30,21 @@ console.log(p);
 // string properties of an object.
 const object = { a: "1", b: "2", c: "3" };
 debugger;
-for (const property in object) {
-  console.log(`${property}: ${object[property]}`);
+console.log("With for...in");
+for (const key in object) {
+  console.log(`${key}: ${object[key]}`);
 }
+console.log("With for...of");
+try {
+  for (const item of object) {
+    console.log(item); // TypeError: object is not iterable
+  }
+} catch(err) {
+    console.log(err.);
+} finally {
+  console.log("for...of cannot be used to iterate objects.")
+}
+
 
 // Labeled statement
 let str = '';
