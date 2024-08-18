@@ -1,5 +1,10 @@
+#road {
+    z-index: auto;
+}
+
 #car {
     position: absolute;
-    top: 580px;
+    top: 550px;
     left: 150px;   
+    z-index: 1;
 }
